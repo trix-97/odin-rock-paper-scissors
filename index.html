@@ -9,8 +9,12 @@
             let choices = ["rock", "paper", "scissors"];
             return (choices[Math.floor(Math.random() * choices.length)]);
         }
+        function showSelection() {
+            console.log(`Player selected: ${playerSelection} | Computer selected: ${computerSelection}`);
+        }
 
         function playRound() {
+            showSelection();
             if (playerSelection === computerSelection) {
                 console.log("Tie");
             }

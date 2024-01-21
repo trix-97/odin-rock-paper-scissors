@@ -9,12 +9,19 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
-            alert(`Computer wins round!, ${computerSelection} beats ${playerSelection}`);
+            roundWon();
         }
         else if (computerSelection === "scissors") {
-            alert(`Player wins round!, ${playRound} beats ${computerSelection}`);
+            roundLost();
         }
     }
+}
+
+function roundWon() {
+    alert(`Player wins round!, ${playerSelection} beats ${computerSelection}`);
+}
+function roundLost() {
+    alert(`Computer wins round!, ${computerSelection} beats ${playerSelection}`);
 }
 
 const playerSelection = prompt("Enter choice: Rock, Paper or Scissors").toLowerCase();

@@ -45,6 +45,7 @@ function game() {
     playRound();
     playRound();
     playRound();
+    checkFinalScore();
 }
 
 function roundWon() {
@@ -58,7 +59,18 @@ function roundLost() {
     alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nComputer wins round!, ${computerSelection} beats ${playerSelection}\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
 }
 function roundTie() {
-    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie`);
+    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+}
+
+function checkFinalScore() {
+    if (playerScore === computerScore) {
+        alert("Game tied!")
+    }
+    else if (playerScore > computerScore) {
+        alert("Player wins the game!")
+    } else {
+        alert("Computer wins the game!")
+    }
 }
 
 let playerSelection;

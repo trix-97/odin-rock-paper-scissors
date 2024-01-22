@@ -66,9 +66,11 @@ function roundTie() {
 function checkRoundScore() {
     if (playerScore >= 3) {
         alert("Player wins the game!");
+        restartGame();
     }
     else if (computerScore >= 3) {
         alert("Computer wins the game!");
+        restartGame();
     }
 }
 
@@ -81,11 +83,20 @@ function checkFinalScore() {
     } else {
         alert("Computer wins the game!");
     }
+    restartGame();
+}
+
+function restartGame() {
+    if (confirm("Do you want to restart the game?")) {
+        location.reload();
+        game();
+    } else {
+        alert("Thank you for playing!")
+        location.reload();
+    }
 }
 
 let playerSelection;
 let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
-// console.log(playRound(playerSelection, computerSelection));
-console.log(game());

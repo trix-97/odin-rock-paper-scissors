@@ -96,7 +96,17 @@ function restartGame() {
     }
 }
 
+function startGame() {
+    if (confirm("Do you want start the game?")) {
+        game();
+    } else {
+        location.reload();
+    }
+}
+
 let playerSelection;
 let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
+
+startGame();

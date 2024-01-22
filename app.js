@@ -1,3 +1,8 @@
+function getChoices() {
+    playerSelection = prompt("Enter choice: Rock, Paper or Scissors").toLowerCase();
+    computerSelection = getComputerChoice();
+}
+
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
     return choices[(Math.floor(Math.random() * choices.length))];
@@ -48,7 +53,7 @@ function roundLost() {
     alert(`Computer wins round!, ${computerSelection} beats ${playerSelection}`);
 }
 
-const playerSelection = prompt("Enter choice: Rock, Paper or Scissors").toLowerCase();
-const computerSelection = getComputerChoice();
+let playerSelection;
+let computerSelection;
 // console.log(playRound(playerSelection, computerSelection));
 console.log(game());

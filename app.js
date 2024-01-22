@@ -8,9 +8,10 @@ function getComputerChoice() {
     return choices[(Math.floor(Math.random() * choices.length))];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound() {
+    getChoices();
     if (playerSelection === computerSelection) {
-        alert("Round Tie");
+        roundTie();
     }
     else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
@@ -39,11 +40,11 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    playRound(playerSelection, computerSelection);
-    playRound(playerSelection, computerSelection);
-    playRound(playerSelection, computerSelection);
-    playRound(playerSelection, computerSelection);
-    playRound(playerSelection, computerSelection);
+    playRound();
+    playRound();
+    playRound();
+    playRound();
+    playRound();
 }
 
 function roundWon() {

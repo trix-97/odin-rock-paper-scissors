@@ -47,10 +47,10 @@ function game() {
 }
 
 function roundWon() {
-    alert(`Player wins round!, ${playerSelection} beats ${computerSelection}`);
+    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nPlayer wins round!, ${playerSelection} beats ${computerSelection}`);
 }
 function roundLost() {
-    alert(`Computer wins round!, ${computerSelection} beats ${playerSelection}`);
+    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nComputer wins round!, ${computerSelection} beats ${playerSelection}`);
 }
 function roundTie() {
     alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie`);

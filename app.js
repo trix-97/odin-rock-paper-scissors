@@ -37,6 +37,7 @@ function playRound() {
             roundWon();
         }
     }
+    checkRoundScore();
 }
 
 function game() {
@@ -62,14 +63,23 @@ function roundTie() {
     alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
 }
 
+function checkRoundScore() {
+    if (playerScore >= 3) {
+        alert("Player wins the game!");
+    }
+    else if (computerScore >= 3) {
+        alert("Computer wins the game!");
+    }
+}
+
 function checkFinalScore() {
     if (playerScore === computerScore) {
-        alert("Game tied!")
+        alert("Game ended in a tie!");
     }
     else if (playerScore > computerScore) {
-        alert("Player wins the game!")
+        alert("Player wins the game!");
     } else {
-        alert("Computer wins the game!")
+        alert("Computer wins the game!");
     }
 }
 

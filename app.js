@@ -49,9 +49,13 @@ function game() {
 
 function roundWon() {
     alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nPlayer wins round!, ${playerSelection} beats ${computerSelection}`);
+    playerScore += 1;
+    computerScore += 0;
 }
 function roundLost() {
     alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nComputer wins round!, ${computerSelection} beats ${playerSelection}`);
+    playerScore += 0;
+    computerScore += 1;
 }
 function roundTie() {
     alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie`);
@@ -59,5 +63,7 @@ function roundTie() {
 
 let playerSelection;
 let computerSelection;
+let playerScore = 0;
+let computerScore = 0;
 // console.log(playRound(playerSelection, computerSelection));
 console.log(game());

@@ -33,6 +33,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function game() {
+    playRound(playerSelection, computerSelection);
+    playRound(playerSelection, computerSelection);
+    playRound(playerSelection, computerSelection);
+    playRound(playerSelection, computerSelection);
+    playRound(playerSelection, computerSelection);
+}
+
 function roundWon() {
     alert(`Player wins round!, ${playerSelection} beats ${computerSelection}`);
 }
@@ -42,4 +50,5 @@ function roundLost() {
 
 const playerSelection = prompt("Enter choice: Rock, Paper or Scissors").toLowerCase();
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+// console.log(playRound(playerSelection, computerSelection));
+console.log(game());

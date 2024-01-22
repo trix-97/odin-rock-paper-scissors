@@ -9,10 +9,26 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
+            roundLost();
+        }
+        else if (computerSelection === "scissors") {
+            roundWon();
+        }
+    }
+    else if (playerSelection === "paper") {
+        if (computerSelection === "rock") {
             roundWon();
         }
         else if (computerSelection === "scissors") {
             roundLost();
+        }
+    }
+    else if (playerSelection === "scissors") {
+        if (computerSelection === "rock") {
+            roundLost();
+        }
+        else if (computerSelection === "paper") {
+            roundWon();
         }
     }
 }

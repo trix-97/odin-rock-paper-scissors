@@ -1,6 +1,6 @@
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
-    return console.log(Math.round(Math.random() * choices.length));
+    return choices[(Math.floor(Math.random() * choices.length))];
 }
 
 function playRound(playerSelection, computerSelection) {

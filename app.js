@@ -52,6 +52,9 @@ function roundWon() {
 function roundLost() {
     alert(`Computer wins round!, ${computerSelection} beats ${playerSelection}`);
 }
+function roundTie() {
+    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie`);
+}
 
 let playerSelection;
 let computerSelection;

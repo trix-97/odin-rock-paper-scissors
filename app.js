@@ -65,23 +65,23 @@ function roundTie() {
 
 function checkRoundScore() {
     if (playerScore === 3) {
-        alert("Player wins the game!");
+        alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
         restartGame();
     }
     else if (computerScore === 3) {
-        alert("Computer wins the game!");
+        alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
         restartGame();
     }
 }
 
 function checkFinalScore() {
     if (playerScore === computerScore) {
-        alert("Game ended in a tie!");
+        alert(`Game ended in a tie!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
     }
     else if (playerScore > computerScore) {
-        alert("Player wins the game!");
+        alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
     } else {
-        alert("Computer wins the game!");
+        alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
     }
     restartGame();
 }

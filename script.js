@@ -1,3 +1,8 @@
+let playerSelection;
+let computerSelection;
+let playerScore = 0;
+let computerScore = 0;
+
 function getChoices() {
     playerSelection = prompt("Enter choice: Rock, Paper or Scissors").toLowerCase();
     computerSelection = getComputerChoice();
@@ -38,15 +43,6 @@ function playRound() {
         }
     }
     checkRoundScore();
-}
-
-function game() {
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    playRound();
-    checkFinalScore();
 }
 
 function roundWon() {
@@ -94,9 +90,4 @@ function restartGame() {
     }
 }
 
-let playerSelection;
-let computerSelection;
-let playerScore = 0;
-let computerScore = 0;
-
-console.log(game());
+// console.log(game());

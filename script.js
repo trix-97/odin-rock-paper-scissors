@@ -3,8 +3,16 @@ let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
+let container = document.querySelector('.container');
+let buttons = document.querySelectorAll('button');
+
+container.addEventListener('click', (event) => {
+    playerSelection = event.target.textContent.toLowerCase();
+    console.log(playerSelection);
+    playRound();
+})
+
 function getChoices() {
-    playerSelection = prompt("Enter choice: Rock, Paper or Scissors").toLowerCase();
     computerSelection = getComputerChoice();
 }
 
@@ -89,5 +97,3 @@ function restartGame() {
         alert("Thank you for playing!")
     }
 }
-
-// console.log(game());

@@ -6,16 +6,13 @@ let computerScore = 0;
 let container = document.querySelector('.container');
 let buttons = document.querySelectorAll('button');
 
-container.addEventListener('click', (event) => {
-    playerSelection = getPlayerChoice(event);
+container.addEventListener('click', () => {
+    playerSelection = getPlayerChoice();
+    computerSelection = getComputerChoice();
     playRound();
 })
 
-function getChoices() {
-    computerSelection = getComputerChoice();
-}
-
-function getPlayerChoice(event) {
+function getPlayerChoice() {
     return event.target.textContent.toLowerCase();
 }
 
@@ -25,7 +22,6 @@ function getComputerChoice() {
 }
 
 function playRound() {
-    getChoices();
     if (playerSelection === computerSelection) {
         roundTie();
     }

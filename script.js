@@ -7,13 +7,16 @@ let container = document.querySelector('.container');
 let buttons = document.querySelectorAll('button');
 
 container.addEventListener('click', (event) => {
-    playerSelection = event.target.textContent.toLowerCase();
-    console.log(playerSelection);
+    playerSelection = getPlayerChoice(event);
     playRound();
 })
 
 function getChoices() {
     computerSelection = getComputerChoice();
+}
+
+function getPlayerChoice(event) {
+    return event.target.textContent.toLowerCase();
 }
 
 function getComputerChoice() {

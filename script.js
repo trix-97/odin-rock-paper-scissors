@@ -5,6 +5,7 @@ let computerScore = 0;
 
 let container = document.querySelector('.container');
 let buttons = document.querySelectorAll('button');
+let result = document.querySelector('.result');
 
 container.addEventListener('click', () => {
     playerSelection = getPlayerChoice();
@@ -53,17 +54,15 @@ function playRound() {
 }
 
 function roundWon() {
-    playerScore += 1;
-    computerScore += 0;
-    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nPlayer wins round!, ${playerSelection} beats ${computerSelection}\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+    result.textContent = `You won this round!, ${playerSelection} beats ${computerSelection}`;
+    return playerScore + 1;
 }
 function roundLost() {
-    playerScore += 0;
-    computerScore += 1;
-    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nComputer wins round!, ${computerSelection} beats ${playerSelection}\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+    result.textContent = `Computer won this round!, ${computerSelection} beats ${playerSelection}`;
+    return computerScore + 1;
 }
 function roundTie() {
-    alert(`Player selected: ${playerSelection} Computer selected: ${computerSelection}\nRound tie\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+    result.textContent = 'Round ended in a tie';
 }
 
 function checkRoundScore() {

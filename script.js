@@ -8,6 +8,7 @@ const buttons = document.querySelectorAll('button');
 const result = document.querySelector('.result');
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
+const restart = document.querySelector('.restart');
 
 container.addEventListener('click', () => {
     playerSelection = getPlayerChoice();
@@ -93,7 +94,10 @@ function disabledButtons() {
 }
 
 function restartGame() {
-    const restart = document.querySelector('.restart');
     restart.style.display = 'block';
-    restart.setAttribute('disabled', 'false');
+    restart.removeAttribute('disabled');
 }
+
+restart.addEventListener('click', () => {
+    location.reload();
+})

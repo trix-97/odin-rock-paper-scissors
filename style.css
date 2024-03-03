@@ -1,16 +1,42 @@
 body {
+    align-items: center;
+    background-color: #191724;
+    color: #908caa;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100svh;
     font-family: 'Inter', sans-serif;
+    height: 100svh;
+    justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+    color: #e0def4;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+button {
+    background-color: #1f1d2e;
+    border: none;
+    color: #908caa;
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+
+button:hover {
+    background-color: #26233a;
 }
 
 .container {
-    border: 1px solid #000;
-    height: 50%;
-    width: 75%;
+    border: 1px solid #1f1d2e;
+    border-radius: 16px;
+    height: 50rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,10 +49,15 @@ body {
     flex-direction: column;
 }
 
+.result {
+    font-size: 1.5em;
+}
+
 .score {
     display: flex;
     flex-direction: row;
     column-gap: 2rem;
+    font-size: 1.2em;
 }
 
 .player-score::before {
@@ -35,4 +66,9 @@ body {
 
 .computer-score::before {
     content: "Computer Score: "
+}
+
+.player-score::before,
+.computer-score::before {
+    color: #e0def4;
 }

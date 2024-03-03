@@ -93,9 +93,7 @@ function disabledButtons() {
 }
 
 function restartGame() {
-    if (confirm("Do you want to restart the game?")) {
-        location.reload();
-    } else {
-        alert("Thank you for playing!")
-    }
+    const restart = document.querySelector('.restart');
+    restart.style.display = 'block';
+    restart.setAttribute('disabled', 'false');
 }

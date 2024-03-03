@@ -72,3 +72,7 @@ button:hover {
 .computer-score::before {
     color: #e0def4;
 }
+
+.restart {
+    display: none;
+}

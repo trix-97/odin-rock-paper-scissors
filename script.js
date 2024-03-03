@@ -3,13 +3,11 @@ let computerSelection;
 let playerScore = 0;
 let computerScore = 0;
 
-let container = document.querySelector('.container');
-let buttons = document.querySelectorAll('button');
-let result = document.querySelector('.result');
+const container = document.querySelector('.container');
+const buttons = document.querySelectorAll('button');
+const result = document.querySelector('.result');
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
-
-
 
 container.addEventListener('click', () => {
     playerSelection = getPlayerChoice();
@@ -56,6 +54,7 @@ function playRound() {
             roundWon();
         }
     }
+    checkScore();
 }
 
 function roundWon() {
@@ -73,28 +72,16 @@ function roundTie() {
     result.textContent = 'Round ended in a tie';
 }
 
-// function checkRoundScore() {
-//     if (playerScore === 3) {
-//         alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-//         restartGame();
-//     }
-//     else if (computerScore === 3) {
-//         alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-//         restartGame();
-//     }
-// }
-
-// function checkFinalScore() {
-//     if (playerScore === computerScore) {
-//         alert(`Game ended in a tie!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-//     }
-//     else if (playerScore > computerScore) {
-//         alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-//     } else {
-//         alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-//     }
-//     restartGame();
-// }
+function checkScore() {
+    if (playerScore === 5) {
+        result.textContent = 'You won the game!';
+        restartGame();
+    }
+    else if (computerScore === 5) {
+        result.textContent = 'Computer won the game!';
+        restartGame();
+    }
+}
 
 function restartGame() {
     if (confirm("Do you want to restart the game?")) {

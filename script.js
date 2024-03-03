@@ -75,11 +75,20 @@ function roundTie() {
 function checkScore() {
     if (playerScore === 5) {
         result.textContent = 'You won the game!';
+        disabledButtons();
         restartGame();
     }
     else if (computerScore === 5) {
         result.textContent = 'Computer won the game!';
+        disabledButtons();
         restartGame();
+    }
+}
+
+function disabledButtons() {
+    const buttons = container.querySelectorAll('button');
+    for (button of buttons) {
+        button.setAttribute('disabled', 'true');
     }
 }
 

@@ -60,14 +60,17 @@ function playRound() {
 }
 
 function roundWon() {
+    result.style.color = '#31748f';
     result.textContent = `You won this round!, ${playerSelection} beats ${computerSelection}`;
     playerScore++;
 }
 function roundLost() {
+    result.style.color = `#eb6f92`;
     result.textContent = `Computer won this round!, ${computerSelection} beats ${playerSelection}`;
     computerScore++;
 }
 function roundTie() {
+    result.style.color = '#908caa'
     result.textContent = 'Round ended in a tie';
 }
 

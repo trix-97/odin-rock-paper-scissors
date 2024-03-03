@@ -56,7 +56,6 @@ function playRound() {
             roundWon();
         }
     }
-    checkRoundScore();
 }
 
 function roundWon() {

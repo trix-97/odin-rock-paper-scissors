@@ -71,28 +71,28 @@ function roundTie() {
     result.textContent = 'Round ended in a tie';
 }
 
-function checkRoundScore() {
-    if (playerScore === 3) {
-        alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-        restartGame();
-    }
-    else if (computerScore === 3) {
-        alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-        restartGame();
-    }
-}
+// function checkRoundScore() {
+//     if (playerScore === 3) {
+//         alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+//         restartGame();
+//     }
+//     else if (computerScore === 3) {
+//         alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+//         restartGame();
+//     }
+// }
 
-function checkFinalScore() {
-    if (playerScore === computerScore) {
-        alert(`Game ended in a tie!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-    }
-    else if (playerScore > computerScore) {
-        alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-    } else {
-        alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
-    }
-    restartGame();
-}
+// function checkFinalScore() {
+//     if (playerScore === computerScore) {
+//         alert(`Game ended in a tie!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+//     }
+//     else if (playerScore > computerScore) {
+//         alert(`Player wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+//     } else {
+//         alert(`Computer wins the game!\nPlayer score: ${playerScore} Computer Score: ${computerScore}`);
+//     }
+//     restartGame();
+// }
 
 function restartGame() {
     if (confirm("Do you want to restart the game?")) {

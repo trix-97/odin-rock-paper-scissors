@@ -9,6 +9,7 @@ const result = document.querySelector('.result');
 const pScore = document.querySelector('.player-score');
 const cScore = document.querySelector('.computer-score');
 const restart = document.querySelector('.restart');
+const btnContainer = document.querySelector('.btn-container');
 
 container.addEventListener('click', () => {
     playerSelection = getPlayerChoice();
@@ -76,21 +77,18 @@ function roundTie() {
 function checkScore() {
     if (playerScore === 5) {
         result.textContent = 'You won the game!';
-        disabledButtons();
+        hideButtons();
         restartGame();
     }
     else if (computerScore === 5) {
         result.textContent = 'Computer won the game!';
-        disabledButtons();
+        hideButtons();
         restartGame();
     }
 }
 
-function disabledButtons() {
-    const buttons = container.querySelectorAll('button');
-    for (button of buttons) {
-        button.setAttribute('disabled', 'true');
-    }
+function hideButtons() {
+    btnContainer.style.display = "none";
 }
 
 function restartGame() {

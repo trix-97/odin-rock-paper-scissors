@@ -93,7 +93,6 @@ function hideButtons() {
 
 function restartGame() {
     restart.style.display = 'block';
-    restart.removeAttribute('disabled');
 }
 
 restart.addEventListener('click', () => {

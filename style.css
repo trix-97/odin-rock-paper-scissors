@@ -1,31 +1,27 @@
 body {
-    align-items: center;
     background-color: #191724;
     color: #908caa;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-    height: 100svh;
-    justify-content: center;
+    font-family: 'Inter', sans-serif, serif;
 }
 
 h1,
 h2,
 h3 {
     color: #e0def4;
+    margin: 0;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.75;
 }
 
 button {
     background-color: #1f1d2e;
     border: none;
     color: #908caa;
-    padding: 1rem 2rem;
-    font-size: 1.2em;
-    border-radius: 30px;
+    padding: 0.75rem 1.75rem;
+    font-size: 1.1em;
+    border-radius: 8px;
 }
 
 button:hover {
@@ -33,31 +29,27 @@ button:hover {
 }
 
 .container {
-    border: 1px solid #1f1d2e;
-    border-radius: 16px;
-    height: 50rem;
-    width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 2rem;
+    row-gap: 1.5rem;
     align-items: center;
-}
-
-.results {
-    display: flex;
-    flex-direction: column;
+    padding: 2rem;
 }
 
 .result {
-    font-size: 1.5em;
+    font-size: 1.1em;
+    text-align: center;
+    background-color: #1f1d2e;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
 }
 
 .score {
     display: flex;
     flex-direction: row;
-    column-gap: 2rem;
-    font-size: 1.2em;
+    column-gap: 1.5rem;
+    font-size: 1.1em;
 }
 
 .player-score::before {

@@ -60,8 +60,8 @@ function playRound() {
 }
 
 function roundWon() {
-    result.style.color = '#31748f';
-    result.style.backgroundColor = '#31748f10'
+    result.style.color = '#9ccfd8';
+    result.style.backgroundColor = '#9ccfd810'
     result.textContent = `You won this round, ${playerSelection} beats ${computerSelection}`;
     playerScore++;
 }
